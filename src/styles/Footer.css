@@ -1,0 +1,56 @@
+.foot_main{
+    width: 100%;
+    height: 50vh;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.foot_box{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-around;
+}
+
+
+
+.foot_list, .foot_icons{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+LI{
+     margin: 8px 0;
+}
+.foot_icons{
+    font-size: 2rem;
+}
+
+.icon{
+    color: black;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .foot_main{
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    .foot_box{
+       height: 20%;
+    }
+}
+
+
+
+@media  (min-width: 767px) and (max-width:1500px) {
+    
+}

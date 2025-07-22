@@ -1,0 +1,29 @@
+
+.head {
+    border: 2px outset pink ;
+    background-color: pink;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    border-radius: 15px;
+    height: 35px;
+    box-shadow: 0px 0px 5px 5px brown;
+    position:fixed;
+    align-items: center;
+    z-index: 1;
+    top: 0px;
+}
+
+.navlink{
+    font-weight: 400;
+    font-family: poppins;
+    font-size: 1.2rem;
+    color: green;
+}
+
+.navlink:hover{
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+}

@@ -1,0 +1,73 @@
+.cos_main{
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.cos_content{
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cos_box{
+    width: 15%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cos_img{
+    border: 2px outset whitesmoke;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.cos_img:hover{
+    transform: scale(1.7);
+    transition: 0.5s;
+}
+
+h4{
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.cos_list{
+    border: 2px inset pink;
+    color: brown;
+    background-color: whitesmoke;
+    height: auto;
+}
+
+
+@media (max-width: 767px) {
+    .cos_main{
+        height: 500vh;
+    }
+
+    .cos_content{
+        width: 100%;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        position: relative;
+        gap: 80px;
+    }
+
+    .cos_box{
+        flex-direction: row;
+        width: 90%;
+    }
+
+    button{
+        height: 50px;
+    }
+}
