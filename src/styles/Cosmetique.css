@@ -50,21 +50,19 @@ h4{
 
 @media (max-width: 767px) {
     .cos_main{
-        height: 500vh;
+        height: 900vh;
+        justify-content: space-around;
     }
 
     .cos_content{
         width: 100%;
         flex-direction: column;
-        height: 100%;
-        justify-content: center;
-        position: relative;
-        gap: 90px;
+        height: 30%;
+        justify-content: space-around;
     }
 
     .cos_box{
-        flex-direction: row;
-        width: 90%;
+        width: 50%;
     }
 
     button{
