@@ -16,7 +16,9 @@ export default function Footer() {
             "Fournissez :",
             "votre nom complet", 
             "votre adresse", 
-            "la liste de vos articles"
+            "la liste de vos articles",
+            "Les frais de livraison seront fixés",
+            "en fonction de la zone de livraison",
         ]
     }
 ];
