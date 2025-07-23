@@ -11,11 +11,11 @@ export default function Cosmetique() {
     const [products, setProducts] = useState([]);
 
     const package1 = [
-        { id: 1, image: picture1, name: "Gommage", price: 3000 },
-        { id: 2, image: picture2, name: "Gommage", price: 2000 },
-        { id: 3, image: picture3, name: "Gommage", price: 10000 },
-        { id: 4, image: picture4, name: "Gommage", price: 2000 },
-        { id: 5, image: picture5, name: "Gommage", price: 3000 },
+        { id: 1, image: picture1, name: "savon", price: 3000 },
+        { id: 2, image: picture2, name: "savon", price: 2000 },
+        { id: 3, image: picture3, name: "savon", price: 10000 },
+        { id: 4, image: picture4, name: "savon", price: 2000 },
+        { id: 5, image: picture5, name: "savon", price: 3000 },
     ];
 
     // Permettre les doublons dans le panier

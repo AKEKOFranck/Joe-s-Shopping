@@ -41,13 +41,15 @@ LI{
 @media (max-width: 767px) {
     .foot_main{
         flex-direction: column;
-        height: 100vh;
+        height: 150vh;
         align-items: center;
         justify-content: space-around;
     }
 
     .foot_box{
        height: 100%;
+       position: relative;
+       top: 50px;
     }
 }
 
