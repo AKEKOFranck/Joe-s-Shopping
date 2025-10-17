@@ -16,6 +16,8 @@ export default defineConfig({
         background_color: "#ffffff",
         display: "standalone",
         start_url: "/",
+        scope: "/", // ✅ Bien ajouté
+        orientation: "portrait", // ✅ Excellent pour mobile
         icons: [
           {
             src: "pwa-192x192.png",
@@ -28,15 +30,12 @@ export default defineConfig({
             type: "image/png"
           },
           {
-            src: "pwa-512x512.png",
+            src: "pwa-512x512-maskable.png", // ✅ Icône maskable dédiée
             sizes: "512x512",
             type: "image/png",
             purpose: "maskable"
           }
         ]
-      },
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
       }
     })
   ]
