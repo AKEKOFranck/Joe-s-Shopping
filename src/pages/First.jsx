@@ -6,7 +6,7 @@ export default function First() {
           <div className="first_main">
 
             <div className="first_box">
-                 <Link to="/Cosmetique" className='link_bt'> <button className="first_bt">  Découvrez </button>   </Link> 
+                 <Link to="/Cosmetique" className='link_bt'> <button className="first_bt">  Explorer </button>   </Link> 
             </div>
             
           </div>

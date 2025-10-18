@@ -13,9 +13,22 @@ export default function Cosmetique() {
     const package1 = [
         { id: 1, image: picture1, name: "savon", price: 3000 },
         { id: 2, image: picture2, name: "savon", price: 2000 },
-        { id: 3, image: picture3, name: "savon", price: 10000 },
-        { id: 4, image: picture4, name: "savon", price: 2000 },
-        { id: 5, image: picture5, name: "savon", price: 3000 },
+    ];
+
+     const package2 = [
+        { id: 1, image: picture3, name: "savon", price: 10000 },
+        { id: 2, image: picture4, name: "savon", price: 2000 },
+    ];
+
+     const package3 = [
+        { id: 1, image: picture5, name: "savon", price: 3000 },
+    ];
+
+    const services  = [
+        "Décoration",
+        "Confection de bouquet d'argent",
+        "Box cadeau",
+        "Confection de dragées"
     ];
 
     // Permettre les doublons dans le panier
@@ -30,8 +43,14 @@ export default function Cosmetique() {
 
     return (
         <section className='cos_main'>
-            <div className='cos_content'>
-                {package1.map((pack) => (
+            <div className='cos_container'>
+                <h2 className='cos_title'> 
+                    Nos différents packs de cosmétiques
+                </h2>
+            </div>
+           <div className='cos_container'>
+            
+ {package1.map((pack) => (
                     <div className='cos_box' key={pack.id}>
                         <img className='cos_img' src={pack.image} alt='photo' />
                         <h4>
@@ -54,9 +73,76 @@ export default function Cosmetique() {
                         </button>
                     </div>
                 ))}
-            </div>
+           </div>
 
-            {/* Panier amélioré */}
+
+            <div className='cos_container'>
+            
+ {package2.map((pack) => (
+                    <div className='cos_box' key={pack.id}>
+                        <img className='cos_img' src={pack.image} alt='photo' />
+                        <h4>
+                            <p>Nom: {pack.name}</p>
+                            <p>Prix: {pack.price} FCFA</p>
+                        </h4>
+                        <button
+                            onClick={() => ajouterProducts(pack)}
+                            style={{
+                                marginTop: '10px',
+                                background: 'green',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '5px',
+                                padding: '5px 10px',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            Ajouter au panier
+                        </button>
+                    </div>
+                ))}
+           </div>
+
+
+           <div className='cos_container'>
+            
+ {package3.map((pack) => (
+                    <div className='cos_box' key={pack.id}>
+                        <img className='cos_img' src={pack.image} alt='photo' />
+                        <h4>
+                            <p>Nom: {pack.name}</p>
+                            <p>Prix: {pack.price} FCFA</p>
+                        </h4>
+                        <button
+                            onClick={() => ajouterProducts(pack)}
+                            style={{
+                                marginTop: '10px',
+                                background: 'green',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '5px',
+                                padding: '5px 10px',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            Ajouter au panier
+                        </button>
+                    </div>
+                ))}
+
+                <h4 className='cos_title1'> 
+                    Découvrer nos autres services :
+                    <ul>
+                        {services.map((service, idx) => (
+                            <li key={idx}>{service}</li>
+                        ))}
+                    </ul>
+                </h4>
+           </div>
+
+           
+            <div className='cos_container'>
+                            {/* Panier amélioré */}
             <div style={{
                 marginTop: '40px',
                 background: '#fff',
@@ -94,6 +180,7 @@ export default function Cosmetique() {
                     </ul>
                 )}
             </div>
+           </div>
         </section>
     );
 }

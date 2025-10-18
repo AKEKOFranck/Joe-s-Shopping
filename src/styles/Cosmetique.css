@@ -1,6 +1,6 @@
 .cos_main{
     width: 100%;
-    height: 300vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,19 +8,36 @@
     background-color: burlywood;
 }
 
-.cos_content{
-    width: 90%;
-    height: auto;
+.cos_container{
+    width: 80%;
+    height: 40vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.cos_title{
+    font-weight: 600;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px black;
+    transition: all 0.5s ease-in-out;
+    font-style: italic;
+}
+
+.cos_title:hover{
+    transform: scale(1.1);
+    cursor: grab;
+    text-decoration: underline;
 }
 
 .cos_box{
     width: 15%;
-    height: 150px;
+    height: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .cos_img{
@@ -28,10 +45,11 @@
     border-radius: 20px;
     width: 100%;
     height: 100%;
+    transition: all 0.5s ease-in-out;
 }
 
 .cos_img:hover{
-    transform: scale(1.7);
+    transform: scale(1.5);
     transition: 0.5s;
 }
 
@@ -48,32 +66,155 @@ h4{
 }
 
 
-@media (max-width: 767px) {
-    .cos_main{
-        height: auto;
-        justify-content: space-around;
+
+
+
+
+
+
+@media (max-width:767px) {
+    
+
+
+    .cos_container{
+        width: 100%;
     }
 
-    .cos_content{
-        width: 100%;
-        flex-direction: column;
-        height: 100%;
-        position: relative;
-        gap: 55px;
-        top: 20px;
+    .cos_title{
+        font-size: 2rem;
     }
 
     .cos_box{
-        width: 50%;
-        height: 90%;
-    }
-
-    button{
-        height: 50px;
+        width: 40%;
+        height: auto;
     }
 
     .cos_img:hover{
-    transform: scale(1.2);
-    transition: 0.5s;
+        transform: scale(1.2);
+    }
 }
+
+
+
+@media (min-width:767px) and  (max-width:1400px) {
+
+    .cos_main{
+        position: relative;
+        gap: 100px;
+    }
+     .cos_container{
+        width: 100%;
+    }
+
+    .cos_title{
+        font-size: 2rem;
+    }
+
+    .cos_box{
+        width: 40%;
+        height: auto;
+    }
+
+    
+    h4{
+        font-size: 1.5rem;
+    }
+
+    .cos_img:hover{
+        transform: scale(1.2);
+    }
 }
+
+
+@media (min-width:768px) and  (max-width:1400px) {
+    
+    .cos_main{
+        position: relative;
+        gap: 90px;
+    }
+     .cos_container{
+        width: 100%;
+    }
+
+    .cos_title{
+        font-size: 2rem;
+    }
+
+    .cos_box{
+        width: 40%;
+        height: auto;
+    }
+
+    .cos_img:hover{
+        transform: scale(1.2);
+    }
+
+    
+    h4{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+@media (min-width:820px) and  (max-width:1400px) {
+ 
+    .cos_main{
+        position: relative;
+        gap: 60px;
+    }
+     .cos_container{
+        width: 100%;
+    }
+
+    .cos_title{
+        font-size: 2rem;
+    }
+
+    .cos_box{
+        width: 40%;
+        height: auto;
+    }
+
+    
+    h4{
+        font-size: 1.5rem;
+    }
+
+    .cos_img:hover{
+        transform: scale(1.2);
+    }
+  
+}
+
+
+
+@media (min-width:1280px) and  (max-width:1500px) {
+ 
+    .cos_main{
+        position: relative;
+        gap: 200px;
+    }
+     .cos_container{
+        width: 70%;
+    }
+
+    .cos_title{
+        font-size: 2rem;
+    }
+
+    .cos_box{
+        width: 40%;
+        height: auto;
+    }
+
+    h4{
+        font-size: 2rem;
+    }
+
+    .cos_img:hover{
+        transform: scale(1.2);
+    }
+}
+
