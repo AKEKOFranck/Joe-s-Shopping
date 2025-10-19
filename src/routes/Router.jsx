@@ -3,8 +3,7 @@ import Layout from '../components/Layout';
 import First from '../pages/First';
 import Cosmetique from '../pages/Cosmetique';
 import Info from '../pages/Info';
-import InstallBT  from '../components/InstallBT';
-
+import InstallBT from '../pages/InstallBT';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,11 +23,12 @@ const router = createBrowserRouter([
         element:<Info />
       },
 
-      
-      {
+       {
         path:'/InstallBT',
         element:<InstallBT />
       },
+
+     
     ]
   }
 ]);
