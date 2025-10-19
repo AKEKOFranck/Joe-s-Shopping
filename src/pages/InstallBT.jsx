@@ -1,5 +1,7 @@
 import '../styles/InstallBT.css';
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 
 export default function InstallBT() {
     const [deferredPrompt, setDeferredPrompt] = useState(null);
@@ -68,6 +70,13 @@ export default function InstallBT() {
                 <div className="installed-message">Application installée ✅</div>
             </section>
         );
+    }
+
+     const location = useLocation();
+    
+    // Ne s'affiche que sur la page /install
+    if (location.pathname !== '/InstallBT') {
+        return null;
     }
 
     return (

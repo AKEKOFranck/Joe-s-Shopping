@@ -11,17 +11,17 @@ export default function Cosmetique() {
     const [products, setProducts] = useState([]);
 
     const package1 = [
-        { id: 1, image: picture1, name: "savon", price: 3000 },
-        { id: 2, image: picture2, name: "savon", price: 2000 },
+        { id: 1, image: picture1, name: "savon1", price: 3000 },
+        { id: 2, image: picture2, name: "savon2", price: 2000 },
     ];
 
      const package2 = [
-        { id: 1, image: picture3, name: "savon", price: 10000 },
-        { id: 2, image: picture4, name: "savon", price: 2000 },
+        { id: 1, image: picture3, name: "savon3", price: 10000 },
+        { id: 2, image: picture4, name: "savon4", price: 2000 },
     ];
 
      const package3 = [
-        { id: 1, image: picture5, name: "savon", price: 3000 },
+        { id: 1, image: picture5, name: "savon5", price: 3000 },
     ];
 
     const services  = [
@@ -141,7 +141,7 @@ export default function Cosmetique() {
            </div>
 
            
-            <div className='cos_container'>
+            <div className='cos_container' id='cos_shop'>
                             {/* Panier amélioré */}
             <div style={{
                 marginTop: '40px',
@@ -160,7 +160,7 @@ export default function Cosmetique() {
                     <ul className='cos_list' style={{ listStyle: 'none', padding: 0 }}>
                         {products.map((product, idx) => (
                             <li key={idx} style={{ marginBottom: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <span>{product.id} - {product.name} - {product.price} FCFA</span>
+                                <span> {product.name} - {product.price} FCFA</span>
                                 <button
                                     onClick={() => supprimerProducts(idx)}
                                     style={{
