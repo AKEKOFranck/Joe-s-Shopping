@@ -1,29 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Start.css";
-import loadingGif from "../assets/LoadingApp.gif"; // ton GIF animé
+import loadingGif from "../assets/LoadingApp.gif";
 
 export default function Start() {
-  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Simule le temps de chargement (ou attends que l'app soit prête)
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000); // 3 secondes d’attente (à ajuster)
-    return () => clearTimeout(timer);
-  }, []);
+      navigate("/"); // redirige vers First.jsx après 3 secondes
+    }, 3000);
 
-  if (isLoading) {
-    return (
-      <div className="splash-screen">
-        <img src={loadingGif} alt="Chargement..." className="loading-gif" />
-      </div>
-    );
-  }
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   return (
-    <div className="home-page">
-      <h1>Joe's Shopping</h1>
+    <div className="splash-screen">
+      <img src={loadingGif} alt="Chargement..." className="loading-gif" />
     </div>
   );
 }
