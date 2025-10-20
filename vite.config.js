@@ -9,6 +9,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,ttf}'],
+        // AJOUT IMPORTANT pour le routing
+        navigateFallback: '/index.html',
+        navigateFallbackAllowlist: [/^(?!\/__).*/],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -17,7 +20,7 @@ export default defineConfig({
               cacheName: 'google-fonts-cache',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 an
+                maxAgeSeconds: 60 * 60 * 24 * 365
               },
               cacheableResponse: {
                 statuses: [0, 200]
@@ -31,7 +34,7 @@ export default defineConfig({
               cacheName: 'images-cache',
               expiration: {
                 maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 jours
+                maxAgeSeconds: 60 * 60 * 24 * 30
               }
             }
           }
@@ -50,13 +53,12 @@ export default defineConfig({
         theme_color: "#f5c16c",
         background_color: "#ffffff",
         display: "standalone",
-        start_url: "/Start",
+        start_url: "/Start", // ✅ CORRECT
         scope: "/",
         orientation: "portrait",
         categories: ["shopping", "beauty", "cosmetics"],
         lang: "fr-FR",
         dir: "ltr",
-        id: "/",
         icons: [
           {
             src: "pwa-64x64.png",
@@ -101,14 +103,13 @@ export default defineConfig({
         ]
       },
       devOptions: {
-        enabled: true, // Active PWA en développement
-        type: 'module', // Utilise le mode module pour les SW
+        enabled: true,
+        type: 'module',
         navigateFallback: 'index.html'
       }
     })
   ],
   build: {
-    // Optimise la build pour PWA
     sourcemap: true,
     rollupOptions: {
       output: {
