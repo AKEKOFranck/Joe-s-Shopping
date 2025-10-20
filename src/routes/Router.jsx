@@ -4,34 +4,37 @@ import First from '../pages/First';
 import Cosmetique from '../pages/Cosmetique';
 import Info from '../pages/Info';
 import InstallBT from '../pages/InstallBT';
+import Start from '../pages/Start';
+
 const router = createBrowserRouter([
   {
+    // PAGE DE DEMARRAGE (Splash Screen)
+    path: '/start',
+    element: <Start />,
+  },
+  {
+    // LAYOUT PRINCIPAL AVEC LES AUTRES PAGES
     path: '/',
     element: <Layout />,
     children: [
       {
-        path:'/',
-        element:<First/>
+        path: '/',
+        element: <First />,
       },
       {
-        path:'/Cosmetique',
-        element:<Cosmetique/>
+        path: '/Cosmetique',
+        element: <Cosmetique />,
       },
-
       {
-        path:'/Info',
-        element:<Info />
+        path: '/Info',
+        element: <Info />,
       },
-
-       {
-        path:'/InstallBT',
-        element:<InstallBT />
+      {
+        path: '/InstallBT',
+        element: <InstallBT />,
       },
-
-
-     
-    ]
-  }
+    ],
+  },
 ]);
 
 export default router;
