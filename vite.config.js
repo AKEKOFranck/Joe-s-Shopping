@@ -50,7 +50,7 @@ export default defineConfig({
         theme_color: "#f5c16c",
         background_color: "#ffffff",
         display: "standalone",
-        start_url: "/",
+        start_url: "/Start",
         scope: "/",
         orientation: "portrait",
         categories: ["shopping", "beauty", "cosmetics"],
