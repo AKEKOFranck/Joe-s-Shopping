@@ -4,7 +4,6 @@ import First from '../pages/First';
 import Cosmetique from '../pages/Cosmetique';
 import Info from '../pages/Info';
 import InstallBT from '../pages/InstallBT';
-import Start from '../pages/Start';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -29,10 +28,6 @@ const router = createBrowserRouter([
         element:<InstallBT />
       },
 
-      {
-        path:'/Start',
-        element:<Start />
-      },
 
      
     ]

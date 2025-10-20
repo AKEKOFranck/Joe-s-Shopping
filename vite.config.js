@@ -44,7 +44,8 @@ export default defineConfig({
         'favicon.ico', 
         'apple-touch-icon.png', 
         'robots.txt',
-        'safari-pinned-tab.svg'
+        'safari-pinned-tab.svg',
+         'LoadingApp.gif'
       ],
       manifest: {
         name: "Joe's Shop",
@@ -53,7 +54,7 @@ export default defineConfig({
         theme_color: "#f5c16c",
         background_color: "#ffffff",
         display: "standalone",
-        start_url: "/Start", // ✅ CORRECT
+        start_url: "/", // ✅ CORRECT
         scope: "/",
         orientation: "portrait",
         categories: ["shopping", "beauty", "cosmetics"],
