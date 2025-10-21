@@ -39,7 +39,7 @@ export default defineConfig({
         theme_color: "#f5c16c",
         background_color: "#ffffff",
         display: "standalone",
-        start_url: "/start", // ✅ Splash d'abord
+        start_url: "/", // ✅ Splash d'abord
         scope: "/",
         orientation: "portrait",
         icons: [
