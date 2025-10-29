@@ -31,7 +31,7 @@ export default defineConfig({
           }
         ]
       },
-      includeAssets: ['favicon.ico','apple-touch-icon.png','robots.txt','safari-pinned-tab.svg'],
+      includeAssets: ['favicon.ico','apple-touch-icon.png','robots.txt','safari-pinned-tab.svg', 'LoadingApp.gif'],
       manifest: {
         name: "Joe's Shop",
         short_name: "JoeShop",
