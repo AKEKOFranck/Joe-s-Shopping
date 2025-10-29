@@ -1,32 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site en maintenance</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: sans-serif;
-      background: #111;
-      color: #fff;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      opacity: 0.8;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Site en maintenance</title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: burlywood;
+    background-image: url('../src/assets/maintenance.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.main{
+    border: 2px solid black;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    gap: 30px;
+     background-color: rgba(245, 245, 245, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            /* Correction: syntaxe appropriée pour le backdrop-filter */
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(15px); /* Préfixe pour Safari */
+            margin: 20px auto;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.title{
+    font-weight: 600;
+    font-style: oblique;
+    color: burlywood;
+}
+
+.text{
+    width: auto;
+    height: auto;
+    font-weight: 500;
+    font-style: italic;
+    color: brown;
+    display: contents;
+}
+
+
+
+
+
+@media (max-width:767px) {
+   
+   .main{
+    width: 90%;
+    top: 0;
+   }
+}
+
+
+
+@media (min-width:767px) and  (max-width:1400px) {
+  
+   .main{
+    width: 90%;
+    top: 0;
+   }
+}
+
+
+@media (min-width:768px) and  (max-width:1400px) {
+     
+   .main{
+    width: 90%;
+    top: 50px;
+   }
+}
+
+
+
+
+@media (min-width:820px) and  (max-width:1400px) {
+ 
+     
+   .main{
+    width: 90%;
+    top: 50px;
+   }
+  
+}
+
+
+
+@media (min-width:1280px) and  (max-width:1500px) {
+   
+   .main{
+    width: 90%;
+    top: 100px;
+   }
+  
+}
+
+
+
+
+    </style>
 </head>
 <body>
-  <h1>🚧 Maintenance en cours</h1>
-  <p>Notre site est momentanément indisponible.<br>Nous revenons très vite !</p>
+    <main class="main">
+        <h1 class="title"> Site en maintenance </h1>
+        <h3 class="text"> 
+            Cher(e) client(e),
+
+Notre site Joe’s Shoppin est actuellement en maintenance afin d’améliorer votre expérience d’achat.
+Nous faisons tout notre possible pour revenir en ligne rapidement.
+
+Merci pour votre patience et votre compréhension 💙
+— L’équipe Joe’s Shoppin
+        </h3>
+
+        <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
+<dotlottie-wc src="https://lottie.host/a0b6a73b-acc6-47a3-b1c9-f126789762eb/v9Qg9awK03.lottie" style="width: 300px;height: 300px" autoplay loop></dotlottie-wc>
+    </main>
 </body>
 </html>
